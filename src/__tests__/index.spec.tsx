@@ -3,7 +3,7 @@
 
 import { render } from '@testing-library/react';
 import { Chance } from 'chance';
-import { Ribbon, RibbonProps } from '../Ribbon';
+import { Ribbon, RibbonProps } from '../';
 import * as styles from '../Ribbon.module.scss';
 
 const chance = new Chance();
@@ -30,6 +30,12 @@ describe('component(Ribbon)', () => {
 
       expect(component.getByTestId('ribbon-content').style.color).toEqual('black');
     });
+
+    it('should support other colors', () => {
+      const component = render(<Ribbon color="rebeccapurple" />);
+
+      expect(component.getByTestId('ribbon-content').style.color).toEqual('rebeccapurple');
+    });
   });
 
   describe('prop(backgroundColor)', () => {
@@ -37,6 +43,12 @@ describe('component(Ribbon)', () => {
       const component = render(<Ribbon />);
 
       expect(component.getByTestId('ribbon-content').style.backgroundColor).toEqual('white');
+    });
+
+    it('should support other colors', () => {
+      const component = render(<Ribbon backgroundColor="rebeccapurple" />);
+
+      expect(component.getByTestId('ribbon-content').style.backgroundColor).toEqual('rebeccapurple');
     });
   });
 
