@@ -1,6 +1,7 @@
 {
   "name": "@rain-cafe/ribbon",
   "packageManager": "yarn@3.6.1",
+  "description": "A simple react ribbon~",
   "version": "1.0.0",
   "source": "src/index.ts",
   "main": "dist/index.js",
