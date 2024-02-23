@@ -17,7 +17,7 @@ describe('component(Ribbon)', () => {
 
   describe('prop(children)', () => {
     it('should support children', () => {
-      const expectedContent = chance.string();
+      const expectedContent = chance.word();
       const component = render(<Ribbon>{expectedContent}</Ribbon>);
 
       expect(component.baseElement.innerHTML).toContain(expectedContent);
