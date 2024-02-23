@@ -9,6 +9,10 @@
 
 # `@rain-cafe/ribbon`
 
+### Preview
+
+![Example](https://github.com/rain-cafe/ribbon/assets/9692284/5ee5e4b3-c676-4ee5-9ec4-ae7f52fd4640)
+
 ### Usage
 
 ```tsx
