@@ -16,9 +16,6 @@
   "peerDependencies": {
     "react": "*"
   },
-  "dependencies": {
-    "@rain-cafe/react-utils": "^1.1.0"
-  },
   "devDependencies": {
     "@kayahr/jest-electron-runner": "^29.11.0",
     "@parcel/packager-ts": "2.11.0",

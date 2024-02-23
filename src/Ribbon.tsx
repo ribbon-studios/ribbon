@@ -3,7 +3,6 @@
 
 import { ComponentProps, ReactNode } from 'react';
 import * as styles from './Ribbon.module.scss';
-import { useReadOnlyCachedState } from '@rain-cafe/react-utils';
 
 export type RibbonProps = {
   /**
@@ -40,7 +39,7 @@ export function Ribbon({
   position = 'top-right',
   ...props
 }: RibbonProps) {
-  const [vertical, horizontal] = useReadOnlyCachedState(() => position.split('-'), [position]);
+  const [vertical, horizontal] = position.split('-');
 
   return (
     <div {...props} className={`${styles.ribbon} ${styles[vertical]} ${styles[horizontal]}`} data-testid="ribbon">
