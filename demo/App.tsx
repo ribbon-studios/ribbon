@@ -1,4 +1,4 @@
-import { useReadOnlyCachedState } from '@rain-cafe/react-utils';
+import { useReadOnlyCachedState } from '@ribbon-studios/react-utils';
 import { Ribbon } from '../src';
 import { useState } from 'react';
 

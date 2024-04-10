@@ -1,5 +1,5 @@
 {
-  "name": "@rain-cafe/ribbon",
+  "name": "@ribbon-studios/ribbon",
   "description": "A simple react ribbon~",
   "version": "1.0.0",
   "source": "src/index.ts",
@@ -44,6 +44,10 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ribbon-studios/ribbon.git"
   },
   "engines": {
     "browsers": "last 2 years, > 1%, not dead"
