@@ -1,8 +1,5 @@
-// eslint-disable-next-line @typescript-eslint/triple-slash-reference
-/// <reference path="../global.d.ts" />
-
 import { ComponentProps, ReactNode } from 'react';
-import * as styles from './Ribbon.module.scss';
+import styles from './Ribbon.module.css';
 
 export type RibbonProps = {
   /**

@@ -1,6 +1,5 @@
-import { useReadOnlyCachedState } from '@ribbon-studios/react-utils';
 import { Ribbon } from '../src';
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 
 type Banner = {
   label: string;
@@ -26,7 +25,7 @@ const banners: Banner[] = [
 
 export function App() {
   const [index, setIndex] = useState(0);
-  const banner = useReadOnlyCachedState(() => {
+  const banner = useMemo(() => {
     return banners[index];
   }, [index]);
 

@@ -16,6 +16,6 @@
     "jsx": "react-jsx",
     "experimentalDecorators": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["src", "demo"],
   "exclude": ["node_modules"]
 }

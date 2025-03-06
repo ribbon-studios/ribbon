@@ -1,10 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/triple-slash-reference
-/// <reference path="../../global.d.ts" />
-
 import { render } from '@testing-library/react';
 import { Chance } from 'chance';
 import { Ribbon, RibbonProps } from '../';
-import * as styles from '../Ribbon.module.scss';
+import styles from '../Ribbon.module.css';
+import { describe, expect, it } from 'vitest';
 
 const chance = new Chance();
 
