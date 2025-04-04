@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { Chance } from 'chance';
-import { Ribbon, RibbonProps } from '../';
+import { Ribbon } from '../';
 import styles from '../Ribbon.module.css';
 import { describe, expect, it } from 'vitest';
 
@@ -58,7 +58,7 @@ describe('component(Ribbon)', () => {
       expect(component.getByTestId('ribbon').classList).toContain(styles.right);
     });
 
-    const positions: NonNullable<RibbonProps['position']>[] = ['top-left', 'bottom-right', 'bottom-left'];
+    const positions: NonNullable<Ribbon.Props<'div'>['position']>[] = ['top-left', 'bottom-right', 'bottom-left'];
     for (const position of positions) {
       it(`should support '${position}'`, () => {
         const [v, h] = position.split('-');
@@ -69,5 +69,20 @@ describe('component(Ribbon)', () => {
         expect(component.getByTestId('ribbon').classList).toContain(styles[h]);
       });
     }
+  });
+
+  describe('prop(as)', () => {
+    it('should default to a div', () => {
+      const component = render(<Ribbon />);
+
+      expect(component.getByTestId('ribbon-content').tagName).toEqual('DIV');
+    });
+
+    it('should support other types', () => {
+      const component = render(<Ribbon as="a" href="https://tyria.ribbonstudios.com" />);
+
+      expect(component.getByTestId('ribbon-content').tagName).toEqual('A');
+      expect(component.getByTestId('ribbon-content').getAttribute('href')).toEqual('https://tyria.ribbonstudios.com');
+    });
   });
 });
